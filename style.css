@@ -241,6 +241,9 @@ p{
       margin-top: 10%;
       margin-left: 30%;
     }
+    #zdjecie{
+      margin-top: 0;
+    }
 
   }
   @media (min-width: 992px) {
@@ -251,6 +254,9 @@ p{
       margin-top: 10%;
       margin-left: 30%;
     }
+    #zdjecie{
+      margin-top: 0;
+    }
 
   }
   @media (min-width: 768px) {
@@ -260,6 +266,9 @@ p{
     .btn{
       margin-top: 10%;
       margin-left: 30%;
+    }
+    #zdjecie{
+      margin-top: 0;
     }
 
 
@@ -272,7 +281,14 @@ p{
       margin-top: 10%;
       margin-left: 30%;
     }
+    #zdjecie{
+      margin-top: 0;
+    }
   }
   @media (min-width: 1400px) {
+    #zdjecie{
+      margin-top: -15%;
+    }
   }
+  
   
