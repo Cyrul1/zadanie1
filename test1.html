@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body class="">
+    <div class="wrapper">
+
+    <header>
+      <nav class="navbar navbar-expand-xxl">
+        
+          <a class="navbar-brand float-start d-inline-block algin-top ms-5 logo" href="#">
+            <img src="/images/logo.png" width="270" height="219" alt="logo" />
+          </a>
+          <button
+            class="navbar-toggler navbar-toggler-right ml-auto"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarCol"
+            aria-controls="navbarCol"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCol">
+            <ul id="midnav" class="navbar-nav mx-auto text-center ul-centered">
+              <li class="nav-item">
+                <a class="nav-link active" href="#">Jak to działa</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">O nas</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Kategorie</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Faq</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Blog</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Kontakt</a>
+              </li>
+            </ul>
+
+            <ul class="navbar-nav justify-content-end" style="margin-left: 10%;">
+              <li class="nav-item align-self-center">
+                <button
+                  type="button"
+                  class="btn btnclass btn-warning btn-lg rounded-5 "
+                >
+                  Zaloguj
+                </button>
+              </li>
+            </ul>
+          </div>
+        
+      </nav>
+    </header>
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-7">
+          <div id="text" class="posi">
+            <h1 class="mb-5">Potrzebujesz <span class="keywords">pożyczki?</span></h1>
+            <p class="mb-0">Z Tandago otrzymasz najlepsze oferty pożyczkowe</p>
+            <p><strong>od 100 zł do aż 15 000 zł!</strong> Wszystko w zaledwie kilka chwil!</p>
+            <p class="mb-0 my-4">Twoja historia kredytowa - dowolna! <strong>Wiek - do 75 lat!</strong></p>
+            <p>Do tego Tandago działa przez cały czas</p>
+            <h2 class="my-5">24 godziny na dobę,<span class="keywords"> 7 dni w tygodniu!</span></h2>
+          </div>
+        </div>
+        <div class="col-xl-5">
+          <div id="zdjecie" class="clearfix mx-4">
+            <img src="images/section-top.png">
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container">
+      
+        <div class="row">
+          <div class="col-xl-4">
+            <div class="card rounded-5 kolor">
+              <div class="card-body">
+                <h2 class="card-title">Kwota <span id="ilosc">15000</span></h2>
+                <div class="main">
+                  <div class="progress-wrapper">
+                    <div id="progressBar"></div>
+                  </div>
+                  <input type="range" min="100" max="30000" value="15000" id="slider">
+                  <div id="selector">
+                    <div class="selectBtn"></div>
+                  </div>
+                </div>
+               <div class="d-flex justify-content-between">
+                  <span class="spancard"><strong>100 zł</strong></span>
+                  <span class="spancard"><strong>30 000 zł</strong></span>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4">
+            <div class="card rounded-5 kolor">
+              <div class="card-body">
+                <h2 class="card-title">Okres <span id="dni">15</span></h2>
+                <div class="main">
+                  <div class="progress-wrapper">
+                    <div id="progressBar1"></div>
+                  </div>
+                  <input type="range" min="15" max="360" value="180" id="slider1">
+                  <div id="selector1">
+                    <div class="selectBtn"></div>
+                  </div>
+                </div>
+               <div class="d-flex justify-content-between">
+                  <span class="spancard"><strong>15 dni</strong></span>
+                  <span class="spancard"><strong>360 dni</strong></span>
+                </div>
+                
+                
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4">
+            <div class="card rounded-5 kolor1">
+              <div class="card-body justify-content-center mx-5">
+                <h1 class="card-title my-2">Otrzymaj</h1>
+                <h2 style="color:#f97914;
+                font-size: xx-large;">Ofertę</h2>
+                
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      
+    </div>
+
+    <script>
+      var slider = document.getElementById("slider");
+      var selector = document.getElementById("selector");
+      var iloscSpan = document.getElementById("ilosc");
+      var progressBar = document.getElementById("progressBar");
+      iloscSpan.innerHTML = slider.value + " zł";
+      
+
+      slider.oninput = function() {
+  var percent = (this.value / this.max) * 100;
+  selector.style.left = percent + "%";
+  progressBar.style.width = percent + "%";
+  
+  
+  iloscSpan.innerHTML = this.value + " zł";
+}
+
+var slider1 = document.getElementById("slider1");
+      var selector1 = document.getElementById("selector1");
+      var dni = document.getElementById("dni");
+      var progressBar1 = document.getElementById("progressBar1");
+      dni.innerHTML = slider1.value + " dni";
+      
+
+      slider1.oninput = function() {
+  var percent = (this.value / this.max) * 100;
+  selector1.style.left = percent + "%";
+  progressBar1.style.width = percent + "%";
+  
+  
+  dni.innerHTML = this.value + " dni";
+}
+
+
+
+
+    </script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+  </div>
+  </body>
+</html>
