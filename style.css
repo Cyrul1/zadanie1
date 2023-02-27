@@ -233,7 +233,7 @@ p{
   #dni{
     color: white;
   }
-  @media (min-width: 1200px) {
+  @media screen and  (min-width: 1200px) {
     #text {
       margin-left: 20px;
     }
@@ -246,7 +246,7 @@ p{
     }
 
   }
-  @media (min-width: 992px) {
+  @media screen and  (min-width: 992px) {
     #text {
       margin-left: 20px;
     }
@@ -259,7 +259,7 @@ p{
     }
 
   }
-  @media (min-width: 768px) {
+  @media screen and (min-width: 768px) {
     #text {
       margin-left: 20px;
     }
@@ -273,7 +273,7 @@ p{
 
 
   }
-  @media (min-width: 576px) {
+  @media screen and  (min-width: 576px) {
     #text {
       margin-left: 10px;
     }
@@ -285,7 +285,7 @@ p{
       margin-top: 0;
     }
   }
-  @media (min-width: 1400px) {
+  @media screen and  (min-width: 1400px) {
     #zdjecie{
       margin-top: -15%;
     }
