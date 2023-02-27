@@ -75,6 +75,7 @@ p{
   
   .kolor{
   background-color: #f7b138;
+  
   }
   .kolor1{
   background-color: #242730;
@@ -245,7 +246,7 @@ p{
       margin-top: 0;
     }
     .karty{
-      margin-left: 30%;
+      margin-left: 15%;
     }
 
   }
@@ -300,6 +301,9 @@ p{
   @media screen and  (min-width: 1400px) {
     #zdjecie{
       margin-top: -15%;
+    }
+    .karty{
+      margin-left: 15%;
     }
   }
   @media screen and  (max-width: 575px) {
